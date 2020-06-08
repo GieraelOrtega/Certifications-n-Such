@@ -1,6 +1,6 @@
 [//]: # (TODO: UPDATE LINKS, IMAGES, AND ToC)
 
-![CySA+ Logo](CySA+_Logo.PNG)
+![CySA Logo](CySA_Logo.PNG)
 
 CySA+ Super Study Guide - Markdown Version (WIP)
 =======================
@@ -18,47 +18,30 @@ CySA+ Super Study Guide - Markdown Version (WIP)
 
 **[CySA+ CSO-001 Overview/Exam Details 2](#_Toc42285075)**
 
-**[Domain I: Threat Management 3](#_Toc42285076)**
+**[Domain I: Threat Management](#_Toc42285076)**
+- [Broad Strokes](#_Toc42285077)
+- [Risk Assessment](#_Toc42285080)
+- [Risk Controls](#_Toc42285084)
+- [Recon and Intelligence](#_Toc42285090)
 
-[Broad Strokes 3](#_Toc42285077)
+**[Domain II: Vulnerability Management](#_Toc42285096)**
+- [Regulatory Requirements](#_Toc42285097)
+- [Scanning](#_Toc42285098)
+- [Remediation](#_Toc42285099)
+- [Analyzing Vulnerability Scans](#_Toc42285100)
+- [Common Vulnerabilities](#_Toc42285103)
 
-[Risk Assessment 5](#_Toc42285080)
+**[Domain III: Cyber Incident Response](#_Toc42285109)**
+- [Security Incidents](#_Toc42285110)
+- [Network Event Monitoring](#_Toc42285114)
+- [Digital Forensics](#_Toc42285117)
 
-[Risk Controls 7](#_Toc42285084)
-
-[Recon and Intelligence 13](#_Toc42285090)
-
-**[Domain II: Vulnerability Management 21](#_Toc42285096)**
-
-[Regulatory Requirements 21](#_Toc42285097)
-
-[Scanning 22](#_Toc42285098)
-
-[Remediation 24](#_Toc42285099)
-
-[Analyzing Vulnerability Scans 26](#_Toc42285100)
-
-[Common Vulnerabilities 29](#_Toc42285103)
-
-**[Domain III: Cyber Incident Response 31](#_Toc42285109)**
-
-[Security Incidents 31](#_Toc42285110)
-
-[Network Event Monitoring 37](#_Toc42285114)
-
-[Digital Forensics 42](#_Toc42285117)
-
-**[Domain IV: Security Architecture and Tool Sets 47](#_Toc42285121)**
-
-[Policy Frameworks 47](#_Toc42285122)
-
-[Defense In Depth 50](#_Toc42285127)
-
-[Identity 55](#_Toc42285129)
-
-[Software Development Life Cycle 61](#_Toc42285132)
-
-[Specific Tools 66](#_Toc42285133)
+**[Domain IV: Security Architecture and Tool Sets](#_Toc42285121)**
+- [Policy Frameworks](#_Toc42285122)
+- [Defense In Depth](#_Toc42285127)
+- [Identity](#_Toc42285129)
+- [Software Development Life Cycle](#_Toc42285132)
+- [Specific Tools](#_Toc42285133)
 
 **[Performance Based Question Review 71](#_Toc42285134)**
 
