@@ -1,6 +1,6 @@
 [//]: # (TODO: UPDATE LINKS, IMAGES, AND ToC)
 
-![CySA Logo](CySA_Logo.PNG)
+![CySA Logo](CySA_Logo.jpg)
 
 CySA+ Super Study Guide - Markdown Version (WIP)
 =======================
