@@ -1,6 +1,6 @@
 [//]: # (TODO: UPDATE LINKS, IMAGES, AND ToC)
 
-![CySA Logo](Resources/CySA_Logo.PNG)
+![CySA Logo](Resources/CySA_Logo.jpg)
 
 CySA+ Super Study Guide - Markdown Version (WIP)
 =======================
@@ -2400,8 +2400,3 @@ CySA+ Super Study Guide - Markdown Version (WIP)
     - Look for repeating IPs, keywords, common ports, server names for clues
     - Look for escalating privileges, admin/system/root accounts
     - Look for users being added to groups, esp. Admin group
-
-![](RackMultipart20200608-4-10inig7_html_1e9a1e495074ed.png) **Protocol IDs**
-
-  - PID 50 - ESP IPsec IPsec
-  - PID 51 - AH IPsec Authentication Headers
