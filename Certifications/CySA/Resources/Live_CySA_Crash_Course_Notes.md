@@ -584,7 +584,412 @@ Security Architectures
         - Signatures for detection
         - Behavior trigger
         - Domains blocked
-    - Unknown
+    - Unknown = Attack not known or characterized
+        - Signature does NOT exist
+        - Must use behavioral/anomoly detection
+            - Sandboxing/Honeypots/etc.
 
+- Intrusion Detection and Prevention
+    ```
+    - Signature Detection = Looking for known attack patterns
+    - Threat Detection    = Looking for malicious behavior
+    - Anomaly Detection   = Looking for unusual behavior
+
+    - Intrusion DETECTION System  = Passive (doesn't block attacks. Can be inline or off mirror port)
+    - Intrusion PREVENTION System = Active (CAN block attacks. Must be inline)
+    ```
+
+- Viruses and Malware
+    - Viruses = Code capable of copying itself and damages the computer
+        - Antivirus
+            - File Based signatures = Known Malicious Files
+            - File Behavior = Some file analytics
+            - File Modification Detection = Limited encoding detection
+    - Malware = Umbrella term for various malicious software
+        - Antimalware
+            - Protects vs. worms, trojans, keyloggers
+
+- Proxies
+    - Open Proxy = Accessible by anybody on the internet
+        - Can conceal the user's IP
+    - Reverse Proxy = Proxy which appears to clients as ordinary server
+        - Requests are forwarded to one or more server
+    - Man-in-the-middle = Attacker captures traffic via ARP posioning, spoofing, etc
+
+- MBSA = Microsoft Baseline Security Analyzer
+
+***
+
+Identity
+--------
+
+- Key Concepts of Identity (AAA)
+    - Authentication (Who are you?)
+    - Authorization (What can you access?)
+    - Accounting (Record of what you do)
+
+- MFA = Multi-Factor Authentication
+    - Something You Know
+        - Passwords
+        - Pins
+    - Something You Have
+        - Token
+        - Certificates
+    - Something You Are
+        - Fingerprint
+        - Eye Scan
+
+- Identity Repositories
+    - Directory Services = Centralized repo for service distributions
+    - TACACS+ = Family of protocols handling remote auth
+    - RADIUS = Central authentication, authorization, and accounting
+    - Kerberos = Ticket based authorization system
+
+- SSO = Single Sign-On
+    - LDAP and CAS = Central Authentication Service
+    - OpenID = Open source standard for decentralized auth
+    - OAuth = Open authorization standard
+    - OpenID Connect = Authentication layer
+    - Facebook Connect = Sharing Facebook login to other system
+
+- Identity Attacks
+    - Impersonation = Abusing OAuth Open Redirect to take access
+    - Session Hijack = Copying an auth'd session and using on their browser
+    - Golden Ticket = Kerberos attack getting a lifetime ticket granting ticket
+    - XSS = Placing script on site that sends auth. session to attacker
+    - Pass the Hash = Session hijacking as a MITM
+
+- STUDY LINUX FILE PERMISSIONS!
+
+- Password Attacks
+    - Dictionary Attack
+    - Brute Force Attack
+    - Rainbow Table Attack
+    - Phishing
+    - Social Engineering
+    - Malware
+    - Offline Cracking
+    - Guess
+
+- **NOTE: Questions related to tools are typically more broad/general**
+
+- Context-Based Authentication
+    - User Roles
+    - IP Address Reputation
+    - Time of Day
+    - Location check
+    - Frequency of access
+    - Device based
+
+***
+
+Access Control
+--------------
+Evaluating systems that access the network
+
+- Terminology
+    - Port Security = Manually enabling port controls
+    - Automated Access Control = Automatically adjusting security
+    - Profiling = Examining traffic to fingerprint devices
+    - Posture = Evaluating endpoints for risk
+
+- Remediation
+    - Quarantine = Limit or deny network access
+    - Isolation  = Put into a separate VLAN or remove from the network
+    - Patch/Upgrade = Windows/ AV Update
+    - Software Link = Offer software
+
+- Context-Based Challenges
+    - Time       = What time the devices is accessing
+        - Daily Spike Times
+        - Seasonal Spike Times
+        - Events
+    - Location   = What part of the network (LAN, VPN, Wireless)
+        - Separated AD Forests
+        - Remote vs. Local
+        - Wireless Roaming
+    - Frequency  = How often is access needed
+        - Rapid Requests
+        - Heartbeat Technologies
+        - Delayed Requests
+    - Behavioral = User trends (Traveling, data access, etc.)
+        - Policy Exceptions
+        - Road Warriors
+        - Privilege Changes
+        - IoT
+
+- DHCP Fingerprinting = Detect end device's OS based on DHCP exchange packets
+
+- Nmap
+    ```
+    -sV        = Version Detection
+    -A         = Enables additional information
+    --allports = Scan all ports instead of default 1024
+    -O         = OS
+    ```
+
+***
+
+Policy + Controls
+-----------------
+
+- Policies
+    - High level, REQUIRED
+    - Contains standards, procedures, and guidelines
+    - Security Policies
+        - Information security policy – High-level authority and guidance
+        - Acceptable use policy (AUP) – What is permitted
+        - Data ownership – Ownership of information and usage
+        - Data classification policy – How data is classified
+        - Data retention policy – How long data is held and destroyed
+        - Account management policy – User account lifecycle
+        - Password policy – Password rules
+- Standards
+    - Mandatory requirements aimed at enforcing policies
+- Procedures
+    - Specific security documents. Think Playbook
+    - Step-by-step document
+- Guidelines
+    - OPTIONAL. Think "helpful advice"
+
+- Data retention: Typically 3 years
+
+- Controls
+    - Physical Controls
+        - Fences
+        - Man Traps
+        - Doors and Locks
+        - Motion Sensors
+    - Logical/Technical Controls
+        - Encryption
+        - Logical Segmentation
+        - Authentication
+        - Access Control Lists (ACLs)
+    - Administrative Controls
+        - Training
+        - Disaster preparedness
+
+***
+
+Compliance
+----------
+
+- Frameworks
+    - GLBA  = Gramm-Leach-Bliley Act (Financial Institutions)
+    - SOX   = Sarbanes-Oxley (Financial records of publicly traded companies)
+    - FERPA = Family Education Rights and Privacy Act (Educational institutions)
+    - NIST  = National Institute of Standards and Technology (Cybersecurity)
+    - ISO   = International Organization for Standardization
+        - ISO 27001 = Information Security Management
+    - COBIT = Control Objectives for Information and Related Technologies
+        - Framework, Process Descriptions, Control Objectives, Management Guidelines, Maturity Models
+        - Maturity Levels
+            - 0 = Nonexistent (Lack progress)
+            - 1 = Initial/Ad Hoc (Recognize issues exist)
+            - 2 = Repeatable but intuitive (Process developed by different people doing the same task)
+            - 3 = Defined Process (Standardized and documented procedures)
+            - 4 = Managed and measurable (Measure compliance with procedures)
+
+    - SABSA = Sherwood Applied Business Security Architecture
+        - Framework/methodology for sec architecture/service management
+    - TOGAF = The Open Group Architecture Framework
+        - Framework providing planning for enterprise architecture
+    - ITIL = Informaiton Technology Infrastructure Library
+        - Standardize selection, planning, dev of IT services to business
+
+- Framework Recap
+    - NIST = Government approved cyber framework
+    - ISO = Approach to manage and secure sensitive company information
+    - COBIT = Set of controls over information technology
+    - SABSA = Framework and methodology for enterprise security architecture and service management
+    - TOGAF = Framework providing designing, planning, implementing and governing enterprise information technology architecture
+    - ITIL = Standardize selection, planning, delivery and support of IT services
+
+***
+
+Processees
+----------
+
+- Separation of Duties = No one person should be able to affect a breach of security
+- Dual Control = Require two people for one action (Form of sep. of duties)
+- Cross Training = Training in more than one role/skill
+- Mandatory Vacation = Forcing employee to take week+ off to identify fraud/collusion
+- Succession Planning = Identifying replacements to take over roles
+
+- Change Control Process
+    ```
+    - Identify  = What changes to make
+    - Assess    = What is impact of change
+    - Approve   = Project management and leadership should get approval
+    - Implement = Execute plan
+    - Follow-up = Verify work is done and re-assess impact of changes
+
+***
+
+Incident Response
+-----------------
+
+- Process
+    ```
+    - Preparation    = Prepare for potential incidents
+    - Identification = Determine if a security incident occurred
+    - Containment    = Isolate the incident to prevent further damage
+    - Remediation    = Identify root cause and remove impacted systems
+    - Recovery       = Return systems back to product that are no longer a threat
+    - Learn          = Benefit from incident to improve security in the future
+    ```
+    
+- NIST SP 800-61 = The Incident Response Detection & Analysis
+    - Preparation
+        - Build CSIRT
+    - Detect and Analysis
+        - Alerts = Alarms from security tools
+        - Logs = Documents containing various alerts
+        - Publicly Available Vuln. Data
+        - People = Trained eyes that flag an incident
+    - Contain, Eradicate, and Recovery
+        - Scope = Choose containment strategy
+        - Contain = Prevent breach from spreading
+            - Segmentation = Least privilege for each segment
+            - Isolation    = Completely cut off the attacker from the network
+            - Removal      = Sanitization, reconstruction/reimaging, secure disposal
+        - Eradicate = Remove contained threat
+        - Recovery = Return back to operational state
+
+- NIST 800-88 = Secure Disposal
+    ```
+    - Clear   = Using common read/write commands or using factory restore
+    - Purge   = Overwrite with 0's, block erasing, etc.
+    - Destroy = Drill the drive, melting, etc.
+    ```
+
+***
+
+Digital Forensics
+-----------------
+
+- Chain of Custody = Chronological documentation/paper trail of electronic/physical evidence
+
+- Powered on stays on and Powered off stays off = DO NOT CHANGE THE DEVICE'S STATE
+    - On  = Collect the RAM information and see running processes
+    - Off = Leave off
+
+- Data Acquisition
+    - Static = Device powered off. Non-volatile
+    - Live   = Running. Volatile such as registries, cache, ram.
+
+- Important Locations
+    - Temporary applications in AppData
+    - Password files in Shadow/Passwd/SAM
+    - COredumps and hibernation files for encryption keys (in mem)
+
+***
+
+Secure Development
+------------------
+
+- SDLC = Secure Software Development Life Cycle
+
+- Models
+    - Waterfall
+    - Spiral
+    - Agile
+    - Rapid
+
+- Testing and Analysis
+    - Static Code Analysis
+        - Data Flow Analysis = Collect run-time info about data while in static
+        - Taint Analysis = Identify variables that are tainted with user controllable input
+    - Fuzzing
+        Sending random and excessive data during blackbox testing
+    - Fault Injection
+        - Inserting faults into error handling paths
+    - User Acceptance Testing
+        - Getting feedback from targeted audience/customer
+    - Stress Testing/Load Testing
+        - Observing availability under extreme conditions
+    - Regression Testing
+        - Ensuring older programming still works with new changes
+    - Input Validation
+        - Ensuring proper testing for any input given
+    - Parameterized Queries
+        - Using pre-made SQL statements to prevent SQL attacks
+
+- Preventative Security = Designed to block attacks and reduce vuln. exposure
+- Collective Security   = Centralized data collection and correlation
+- Analytical Security   = Proactively identify vulnerabilities to enforce better security practices
+
+***
+
+Concept Review
+--------------
+
+- Sample Questions
+    ```
+    - When deploying vuln scanner across the network but afraid of sensitive data from being seen, what do you do?
+        - Encrypt between systems. Host agents
+    - What does Chmod 777 -Rv do?
+        - Removes security. Read, write, view everything
+    - What is the term for sending ranodm data at something to test?
+        - Fuzzing
+    - What protocols can be used to profile a system?
+        - Netflow, DHCP, DNS, SNMP
+    - Server is vulnerable but can't be patched. What can you do?
+        - Secure around it (The networ)
+    - Where is data found that is fragments between files?
+        - Slack Space
+    - What is the tool you CAN'T use to create a forensic copy? (DD, FTK, RW, Encase)
+        - RW
+    - What is the first step for forensics after you collect a system?
+        - Make a forensic copy
+    - How would you start a response to an incident
+        - Preparation/Identification
+    - Which tool is best to prevent a rootkit? IPS, AntiVirus, File Integrity/Breach Detection, Content Filter?
+        - File Integrity/Breach Detection
+    - What is a data source that is made up of multiple customer data that can enhance security
+        - Threat Intelligence
+    - Which comes first for the SDLC?
+        - Requirement Gathering
+    - What is a WAF?
+        - Web Application Firewall. Attempts to block web-based attacks such as SQL injection
+    - Which provides a single point of failure? Load balancing, Consolidation, HA?
+        - Consolidation
+    - Which would not be in a security policy? Statement regarding security, requirement to use AES-256, delegation of authority, designation of responsible exec?
+        - AES-256. Too specific for a policy
+    - What is the term when one person codes and explains while the other observes/documents?
+        - Over-the-shoulder Review
+    - What practice ensures patches don't break services?
+        - Regression Testing
+    - What type of control is a fire extinguisher?
+        - Physical
+    - Which auth. protocol is best for untrusted networks?
+        - Kerberos
+    - Which software dev. module uses a four phase linear dev?
+        - Spiral
+    - Which threat analysis detection is best for unknown threats? (Trend, Signature, Heuristic, Regression)
+        - Heuristic
+    Which tactic blocks software not permitted on host desktops?
+        - Whitelisting
+    - What file format does dd give?
+        - RAW
+    - Which is a step of the recovering stage? (Rebuild, Scan, Destroy, Report)
+        - Scanning
+    - Which NIST publication covers cybersecurity incident handling?
+        - SP 800-61
+    - Which is not a purging activity? (Factory Reset, Block Erase, Crypto Erase)
+        - Factory Reset
+    - Which ISO standard covers security management controls?
+        - 27001
+    - What is a background check policy considered?
+        - Administrative
+    - Which model would you recommend for describing 5 activities associated with IT service management?
+        - ITIL
+    - What tier of NIST cybersecurity framework is policy adaptive?
+        - T4
+    - Joey is writing a document listing acceptable rules for VPN access? What is this?
+        - A standard
+    - What would not help in phishing? (Training, SIEM monitoring logins, NGFW, MFA)
+        - NGFW
+    ```
 [CrashCourse]: https://learning.oreilly.com/live-training/courses/comptia-cybersecurity-analyst-cysa-cs0-001-crash-course/0636920453383/
 [OReillyTraining]: https://learning.oreilly.com/videos/comptia-cybersecurity-analyst/9780134772066
