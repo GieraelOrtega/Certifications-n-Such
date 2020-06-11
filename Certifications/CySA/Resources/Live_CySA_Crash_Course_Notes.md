@@ -167,36 +167,44 @@ Risk Management
         - Social Engineering Tool Kit (SET)
 
 - Types of Data (VERY IMPORTANT AND SPECIFIC ON TEST)
+    ```
     - PHI                    = Personal Health Information
     - PII                    = Personal Identifiable Information
     - PCI                    = Payment Card Information
     - Intellectual Property  = Work/invention with rights/protections
     - Corporate Confidential = Sensitive to corporation such as merger/accounts
+    ```
     
 - Risk (Risk = Threat x Vulnerability)
     - Main factors = Risk, Cost, and Likelihood
     - Defense = Risk Reduction
 
 - Impact (Outcome of a risk)
+    ```
     - Potential Downtime         = Systems unavailable
     - System Process Criticality = Rating importance of a process to avoiding downtime
     - Recovery Time              = Time to recover and resume operations
     - Data Integrity             = Maintaining assurance of accuracy/consistency of data
     - Economic                   = Effect an event has on the economy
     - Type of data               = Corporate vs. confidential
+    ```
 
 - Risk Actions
+    ```
     - Risk Reduction      = Implement countermeasure
     - Risk Transfer       = Purchase Insurance
     - Risk Acceptance     = Accept a possible loss
     - Risk Rejection      = Pretend there isn't a risk
     - ~Risk Exploitation~ = Abusing the risk on purpose (Not official)
+    ```
 
 - Validation
+    ```
     - Scanning    = Looking for existing vulns
     - Patching    = Fixing/updating systems with vulns
     - Permissions = Ensure least privilege concept
     - Logging     = Ensure events being captured properly
+    ```
 
 ***
 
@@ -216,10 +224,12 @@ Vulnerability Management
 - Vulnerability Assessment
     - Positive = Identified | Negative = Rejected
     - Types
+        ```
         - True Positive  = Correctly Identified   (e.g. sick person seen as sick)
         - False Positive = Incorrectly Identified (e.g. healthy person seen as sick) 
         - True Negative  = Correctly Rejected     (e.g. health person seen as healthy)
         - False Negative = Incorrectly Rejected   (e.g. sick person seen as healthy)
+        ```
 
 - SANS Vulnerability Management
     1. Asset Inventory
@@ -241,6 +251,7 @@ Vulnerability Management
     - Study when to use Centralized vs. Distributed?
 
 - Reverse Engineering Threats
+    ```
     - Communication      =  Blacklist malicious remote sources
     - Attach Techniques  = Specific exploit/port used
     - Reconnaissance     = Seeking other sources
@@ -249,13 +260,16 @@ Vulnerability Management
     - Network Traits     = Specific behavior
     - Static Analysis    = Viewing source code to analyze
     - Dynamic Analysis   = Running and observing to analyze
+    ```
 
 - Patch Management Best Practices
+    ```
     - Develop Inventory        = Systems, Applications, etc.
     - Standardize              = Easier to build policies
     - Existing Controls        = Document existing security
     - Reported Vulnerabilities = Consolidate found vulnerabilities, assessment findings, etc.
     - Classify Risk            = Develop plan to roll out patching
+    ```
 
 ***
 
@@ -272,6 +286,7 @@ Reconnaissance Techniques
     - Passive Fingerprinting = Slowly, passively analyze collected packets on the network
 
 - Nmap
+    ```
     -sS = TCP SYN
     -sT = Connect()
     -sA = ACK
@@ -282,6 +297,7 @@ Reconnaissance Techniques
     -sF = FIN
     -sX = Xmas scans5
     -sO = IP protocol scan
+    ```
 
 - Important Ports
     - HTTP:   80 | Telnet: 23 | FTP:   21 <- Unencrypted
@@ -290,14 +306,16 @@ Reconnaissance Techniques
 - *STUDY: Blue Team's perspective: Syn scans, 3-way handshake, fin scan, etc.*
 
 - Data Analysis
+    ```
     - Anomaly Analysis   = Differences in established patterns
     - Trend Analysis     = Predicting behavior such as congestion
     - Signature Analysis = Detecting known events (IPS, antivirus)
     - Heuristic/Behavior = Detecting malicious behavior
+    ```
 
 - Terminology
-    - Email Harvesting    = Gathering email addresses
-    - DNS Harvesting      = Gathering public, published DNS and server names
+    - Email Harvesting = Gathering email addresses
+    - DNS Harvesting   = Gathering public, published DNS and server names
         - Whois
         - Anti-DNS Techniques:
             - Blacklisting network
@@ -323,19 +341,24 @@ Point in Time Analysis
     - Types
         - Packet Captures
             - Pcaps & NetFlow
+                ```
                 - Pcap    = Logging network data (Think full phone call)
                 - NetFlow = Logging network records (Think call history)
+                ```
             - Tools
+                ```
                 - Wireshark        = Capture Realtime or view pcap files
                 - TCPdump/Windump  = Dump data to file
                 - Snort            = Intrusion detection/prevention
                 - NGFW/IPS         = Intrusion detection/prevention
                 - NetFlow Analyzer = Baseline and look for anomalies
+                ```
         - Configurations
         - Memory Analysis
         - Drive Captures
 
 - Specific Tools
+    ```
     - Rmon     = Monitor LAN on layers 1-4
     - TCP Dump = CLI packet analyzer
     - Netstat  = Gather local host net info and behavior
@@ -345,6 +368,7 @@ Point in Time Analysis
     - Perfmon  = Host controllers, mem usage
     - Pstree   = View running processes
     - Df       = Disk space
+    ```
 
 - System Logs **IMPORTANT: Usually reading syslogs on the exam**
     - Operating System Logs
@@ -363,6 +387,7 @@ Point in Time Analysis
 - Event Logs
     - Event or notification
     - Categories
+        ```
         0 = Emerg   = High priority and must be attended to  
         1 = Alert   = Requires immediate attention  
         2 = Crit    = Critical condition that could be a system failure  
@@ -370,7 +395,8 @@ Point in Time Analysis
         4 = Warning = Potential minor issue  
         5 = Debug   = Troubleshooting messages  
         6 = Notice  = Event that might require attention  
-        7 = Info    = General Information  
+        7 = Info    = General Information
+        ```
 
 - SNMP = Simple Network Management Protocol (v1 = unsecure, v3 = recommended)
     - SNMPv3 Adds: Encryption, Authentication, and User Accounts **IMPORTANT**
@@ -387,7 +413,7 @@ Point in Time Analysis
 ***
 
 Vulnerability Discovery
-=======================
+-----------------------
 - Compliance
     - PCI DSS = Paymment Cards
         - Approved Algorithms:
@@ -443,23 +469,122 @@ Web Applications
     - Failure to Restrict URL Access
 
 - Common Attacks
+    ```
     - Buffer Overflow      = Attacker placing more data in memory than allocated
     - Privilege Escalation = Attacker increases level of access on target
     - SQL Injection        = Exploitation of a web app vulnerability
     - Cross-Site Scripting = Injection with malicious scripts into the site
     - Denial of Service    = Disrupting services
-        - DDoS vs. DoS = Distributed vs. specific target
+    ```
+
 
 - Threat Containment
+    ```
     - Segmentation = Separate sensitive systems from regular users
     - Isolation    = Place risky systems on a separate network (e.g. Guest networks)
     - Remove       = Automated/Manual reaction to identified threat. Removing connection.
+    ```
 
 ***
 
 Day 2
 =====
 
+General Notes
+-------------
+
+- Sample Questions:
+    ```
+    - What type of attack would look like '1'=='1? 
+        - SQL Injection
+    - Which type of traffic would you see in a mail server?
+        - 25, SMTP, POP, web traffic
+    - Which CVSS is the highest priority?
+        - 10
+    - What's open: 22/TCP, 443/TCP
+        - SSH and HTTPS
+    - In CVSS3#AV:N/AC:M/Au:S/C:P/I:H/A:NC, whats the attack vector and integrity?
+        - Network-Based, High
+    - What if a systems is beaconing over an unusuaul port but nothing is triggered?
+        - Zero Day
+    - Joe notices the web server is redicrecting to a malicious source. What did the attacker use?
+        - XSS
+    - Joey moves guest to a separate network what is this tactic?
+        - Segmentation
+    - Which port shouldn't be used for a jumpbox? (22, 23, 443, 3389)
+        - 23 = Telnet. Not secure
+    - When compromised, which should be fixed first? Admin laptop, server, NTP system, or DMZ?
+        - NTP! Time is critical
+    - Explain the difference between Ingress and Egress
+        - Ingress = INBOUND data entering the network
+        - Egress  = OUTBOUND data leaving the network
+    - What flag for nmap to identify OS?
+        - -o / -A
+    - Which Cisco log level is most critical? (0,1,7,20)
+        - 0
+    - Which log most likely has file deletion info
+        - Security Logs
+    - Which process uses TCP stack response, TCP option support, initial sizing?
+        - Application Scanning
+    -  What type of account should be used for credentialed scans?
+        - Read-Only
+    - Which CVSS metric represents the potential for total compromise?
+        - C = Complete
+    - Which is active monitoring? (Netflow, SNMP, Pinging, Monitoring)
+        - Pinging Systems
+    - What features come with SNMPv3?
+        - Encryption, User accounts, and Authentication
+    - What is it called to probe a firewall for rules?
+        - Fire walking
+    - What is PII and PHI?
+        - PII = Personal Identifiable Information
+        - PHI = Personal Health Information
+    - Which should be dealt with first: Stolen cert, DDoS, Buffer overflow with executable code, Web Vuln?
+        - Buffer Overflow as it can lead to code execution
+    - Which protocols are PCI DSS approved?
+        - AES, SHA2, RSA
+    - Which are PKI X.508 Compliant?
+        - DES, AES, IDEA, 3DES, CAST
+    ```
+
+Security Architectures
+----------------------
+- Defense in Depth = Latering defenses
+
+- Identifying Threats
+    ```
+    - Signature Analysis  = Known threats
+    - Trend Analysis      = Large-scale changes to baseline
+    - Heuristic Analysis  = Behavior focused for unknowns
+    - Regression Analysis = Statistical modeling
+    - Anomaly Analysis    = Difference from established patterns
+    ```
+
+- Whitelisting vs. Blacklisting
+    ```
+    - Blacklisting = Block specific software. Easier but less secure
+    - Whitelisting = Allow specific software only. Harder but more secure
+    ```
+
+- Firewalls
+    ```
+    - Packet Filter       = Simply check characters in each packet vs. rules
+    - Stateful Inspection = Beyond packet filter. Also view state
+    - Next Gen (NGFW)     = Beyond stateful, include app, users, context
+    - Web App Firewall    = Specialized for web app attacks such as SQL and XSS
+
+    - IMPORTANT: Difference between Network, Host, Web App Firewalls:
+        - Network = Stateful. Port protection, packet filtering, proxy, etc.
+        - Host    = Program control, host security policies
+        - Web App = Requests/Responses and inspecting layer 7
+    ```
+
+- Known vs. Unknown Threats
+    - Known = Seen and characterized
+        - Signatures for detection
+        - Behavior trigger
+        - Domains blocked
+    - Unknown
 
 [CrashCourse]: https://learning.oreilly.com/live-training/courses/comptia-cybersecurity-analyst-cysa-cs0-001-crash-course/0636920453383/
 [OReillyTraining]: https://learning.oreilly.com/videos/comptia-cybersecurity-analyst/9780134772066
