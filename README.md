@@ -2,13 +2,11 @@
 This is a basic repository that, as the title shows, houses `Certifications` and `Such`. This includes but is not limited to:
 - [Notes/Documents on a per-certification basis](Certifications)
 - Various online resources/links
-- Etc.
+- Additional resources related to certifications/testing
 
 # License & Contribution
 
 This repo is created and managed by [`Gierael Ortega`][LinkedIn]
-
-Feel free to contact him via email at [`gieraelortega.business@gmail.com`][MailTo] or via [LinkedIn][LinkedIn]
 
 ```
    Copyright 2020 Gierael Ortega
@@ -27,4 +25,3 @@ Feel free to contact him via email at [`gieraelortega.business@gmail.com`][MailT
 ```
 
 [LinkedIn]: https://linkedin.com/in/gieraelortega/
-[MailTo]: mailto:gieraelortega.business@gmail.com
