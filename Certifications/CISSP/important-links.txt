@@ -1,0 +1,31 @@
+Useful CISSP Links/Resources
+============================
+- https://www.isc2.org/Certifications/CISSP
+- http://www.issa.org/?page=CSCL
+- http://isc2chapter-las-vegas.org/
+- http://www.issa.org/?page=CSCL
+- https://www.skillset.com/
+- https://www.simplilearn.com/book-resources-to-read-for-cissp-certification-exam-article
+- https://cccure.training/
+- https://www.freepracticetests.org/quiz/index.php
+- https://www.cybrary.it/course/cissp/
+- http://www.mhprofessionalresources.com//sites/CISSPExams/exam.php?id=AccessControl
+- http://azcwr.org/
+- http://lvissa.org/StudentsFall2017/cisspplanningkit.pdf/
+- http://lvissa.org/StudentsFall2017/Cryptography.pdf
+
+CISSP Apps
+==========
+- http://learnzapp.com/apps/cissp/
+- http://www.pocketprep.com/exams/isc2-cissp/
+- https://quizlet.com/subject/cissp/
+
+CISSP Books/Guides
+==================
+- https://www.amazon.com/Certified-Information-Security-Professional-Official-dp-1119475937/dp/1119475937/ref=mt_paperback?_encoding=UTF8&me=&qid=
+- https://www.amazon.com/CISSP-Official-ISC-Practice-Tests/dp/1119475929/ref=dp_rm_img_1
+- https://www.amazon.com/Shon-Harris/e/B001I9Q6M8
+- https://www.amazon.com/CISSP-Dummies-Lawrence-C-Miller/dp/1119210232/ref=sr_1_1?ie=UTF8&qid=1474456314&sr=8-1&keywords=cissp+for+dummies
+- https://www.amazon.com/Official-Guide-CISSP-Fourth-Press/dp/1482262754/ref=sr_1_1?ie=UTF8&qid=1507395019&sr=8-1&keywords=cissp+cbk
+- https://www.amazon.com/Digital-Fortress-Thriller-Dan-Brown/dp/0312944926/ref=sr_1_1?ie=UTF8&qid=1520718124&sr=8-1&keywords=The+digital+fortress&dpID=51-3r56wmOL&preST=_SY344_BO1,204,203,200_QL70_&dpSrc=srch
+- https://www.amazon.com/Kevin-D.-Mitnick/e/B001IO9WEW/ref=sr_tc_2_0?qid=1520718377&sr=8-2-ent
