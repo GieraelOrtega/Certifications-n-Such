@@ -672,13 +672,13 @@ Module #14: Final Quiz
 >     - \*
 >     - `@`
 > 20. What is the most efficient way to filter events in Splunk?
->    - Using booleans.
->    - With an asterisk.
->    - `By time.`
+>     - Using booleans.
+>     - With an asterisk.
+>     - `By time.`
 > 21. Having separate indexes allows:
->    - `Ability to limit access.`
->    - `Faster Searches.`
->    - `Multiple retention policies`
+>     - `Ability to limit access.`
+>     - `Faster Searches.`
+>     - `Multiple retention policies`
 > 22. What command would you use to remove the status field from the returned events?: `sourcetype=a* status=404 | ____ status`
 >     - table
 >     - fields
