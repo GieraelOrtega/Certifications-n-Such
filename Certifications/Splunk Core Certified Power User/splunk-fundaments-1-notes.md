@@ -585,7 +585,7 @@ Module #13: Scheduled Reports and Alerts
 
 ***
 
-Module #14: Final Thoughts (Final Quiz)
+Module #14: Final Quiz
 -----------------------
 
 > **Final Quiz**
@@ -730,28 +730,28 @@ Module #14: Final Thoughts (Final Quiz)
 >     - Alerts
 >     - Indexes
 > 34. To keep from overwriting existing fields with your Lookup you can use the ____________ clause.
->    - `outputnew`
+>     - `outputnew`
 > 35. Finish this search command so that it displays data from the http_status.csv Lookup file: `| ____ http_status.csv`
->    - lookup=*
->    - lookup
->    - datalookup
->    - `inputlookup`
+>     - lookup=*
+>     - lookup
+>     - datalookup
+>     - `inputlookup`
 > 36. External data used by a Lookup can come from sources like:
->    - `Geospatial data`
->    - None. Only internal data can be used.
->    - `Scripts`
->    - `CSV files`
+>     - `Geospatial data`
+>     - None. Only internal data can be used.
+>     - `Scripts`
+>     - `CSV files`
 > 37. Alerts can be shared to all apps.
->    - `True`
->    - False
+>     - `True`
+>     - False
 > 38. An alert is an action triggered by a _____________.
->    - Report
->    - Tag
->    - `Saved search`
->    - Selected field
+>     - Report
+>     - Tag
+>     - `Saved search`
+>     - Selected field
 > 39. Alerts can send an email.
->    - `True`
->    - False
+>     - `True`
+>     - False
 >
 
 ***
